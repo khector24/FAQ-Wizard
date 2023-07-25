@@ -5,20 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53c7882a-9143-43df-834b-18f0c1247e89" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/FAQScreenControllers/NewFAQController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/FAQ-Screens/New-FAQ.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Styles/New-FAQ-Style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/HomePageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Home-Page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Home-Page.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2T2k7g6dNPZ6HMy1EreyS2v1h8q" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -27,11 +47,32 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="APP" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.rainbowacehardware.faqwizard.App" />
+      <module name="FAQ-Wizard" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -40,8 +81,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1690248396566</updated>
-      <workItem from="1690248398281" duration="2000" />
+      <workItem from="1690248398281" duration="5671000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
