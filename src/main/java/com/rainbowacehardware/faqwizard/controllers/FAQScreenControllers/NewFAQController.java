@@ -12,6 +12,8 @@ public class NewFAQController {
     public Button updateBtn;
     public Button deleteBtn;
     public Button clearBtn;
+    public Button homeBtn;
+    public Button FAQBtn;
 
     public void Add(ActionEvent event) {
     }

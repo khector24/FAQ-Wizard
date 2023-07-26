@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.rainbowacehardware.faqwizard.controllers.FAQScreenControllers.ViewFAQsController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../Styles/FAQ-Screens/FAQ-View.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rainbowacehardware.faqwizard.controllers.FAQScreenControllers.ViewFAQsController">
+   <Text layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frequently Asked Questions">
+      <font>
+         <Font size="24.0" />
+      </font>
+   </Text>
+   <TableView layoutX="14.0" layoutY="54.0" prefHeight="320.0" prefWidth="530.0">
+      <columns>
+         <TableColumn fx:id="idCol" prefWidth="40.0" text="ID" />
+         <TableColumn fx:id="questionCol" prefWidth="125.0" text="QUESTION" />
+         <TableColumn fx:id="answerCol" prefWidth="379.0" text="ANSWER" />
+      </columns>
+   </TableView>
+   <VBox alignment="CENTER" layoutX="553.0" layoutY="14.0" prefHeight="200.0" prefWidth="40.0" styleClass="button-hbox">
+      <Button fx:id="editBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false">
+         <graphic>
+            <FontAwesomeIconView glyphName="EDIT" />
+         </graphic>
+      </Button>
+      <Button fx:id="deleteBtn" layoutX="10.0" layoutY="35.0" mnemonicParsing="false">
+         <graphic>
+            <FontAwesomeIconView glyphName="TRASH" />
+         </graphic>
+      </Button>
+      <Button fx:id="homeBtn" mnemonicParsing="false">
+         <graphic>
+            <FontAwesomeIconView glyphName="HOME" />
+         </graphic>
+      </Button>
+   </VBox>
+   <Pane prefHeight="10.0" prefWidth="600.0" style="-fx-background-color: blue;" />
 </AnchorPane>

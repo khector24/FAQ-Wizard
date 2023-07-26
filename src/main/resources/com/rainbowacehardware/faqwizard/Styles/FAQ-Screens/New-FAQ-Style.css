@@ -1,0 +1,47 @@
+
+.body {
+    -fx-spacing: 6px;
+    -fx-padding: 15px;
+}
+
+.label {
+    -fx-font-size: 18px;
+}
+
+.title-hbox{
+    -fx-spacing: 15px;
+}
+
+.inner-hbox{
+    -fx-pref-width: 285px;
+}
+
+.title-label{
+    -fx-font-size: 28px;
+}
+
+
+.inner-button-hbox{
+   -fx-alignment: TOP-RIGHT;
+    -fx-spacing: 6px;
+}
+
+.inner-button-hbox > .button{
+    -fx-pref-width: 70px;
+}
+
+.question-hbox{
+    -fx-spacing: 15px;
+    -fx-pref-height: 50px;
+}
+
+.answer-hbox {
+    -fx-spacing: 15px;
+    -fx-pref-height: 200px;
+}
+
+.bottom-button-hbox {
+    -fx-alignment: CENTER;
+    -fx-spacing: 15px;
+    -fx-pref-height: 55px;
+}
