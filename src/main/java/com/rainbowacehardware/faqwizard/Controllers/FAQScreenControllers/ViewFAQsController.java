@@ -1,7 +1,8 @@
-package com.rainbowacehardware.faqwizard.controllers.FAQScreenControllers;
+package com.rainbowacehardware.faqwizard.Controllers.FAQScreenControllers;
 
 import com.rainbowacehardware.faqwizard.DatabaseConnection;
-import com.rainbowacehardware.faqwizard.objects.FAQ;
+import com.rainbowacehardware.faqwizard.HelperMethods.UIControllerHelper;
+import com.rainbowacehardware.faqwizard.Objects.FAQ;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -14,6 +15,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -37,6 +39,12 @@ public class ViewFAQsController implements Initializable {
     public TableColumn<FAQ, String> questionCol;
     @FXML
     public TableColumn<FAQ, String> answerCol;
+    @FXML
+    public Button refreshBtn;
+    @FXML
+    public Label notificationLbl;
+    @FXML
+    public Button closeBtn;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -94,6 +102,7 @@ public class ViewFAQsController implements Initializable {
 
     @FXML
     public void addBtnOnAction(ActionEvent event) {
+        notificationLbl.setText("");
         openPageHelperMethod("/com/rainbowacehardware/faqwizard/FAQ-Screens/New-FAQ.fxml");
     }
 
@@ -115,6 +124,8 @@ public class ViewFAQsController implements Initializable {
             }
 
             loadDataIntoFAQTable();
+            notificationLbl.setText("Item deleted successfully!");
+            notificationLbl.setStyle("-fx-text-fill: green;");
         }
     }
 
@@ -136,6 +147,9 @@ public class ViewFAQsController implements Initializable {
             Stage newStage = new Stage();
             newStage.setScene(new Scene(root));
 
+            //Set the new stage style
+            newStage.initStyle(StageStyle.UNDECORATED);
+
             // Show the new stage
             newStage.show();
         } catch (IOException e) {
@@ -144,7 +158,18 @@ public class ViewFAQsController implements Initializable {
     }
 
     @FXML
-    public void reloadBtnOnAction(ActionEvent event) {
+    public void refreshBtnOnAction(ActionEvent event) {
         loadDataIntoFAQTable();
+
+        notificationLbl.setText("The page was refreshed successfully!");
+        notificationLbl.setStyle("-fx-text-fill: green;");
+    }
+
+    public void editBtnOnAction(ActionEvent event) {
+    }
+
+    @FXML
+    public void closeBtnOnAction(ActionEvent event) {
+        UIControllerHelper.closeWindow(event);
     }
 }

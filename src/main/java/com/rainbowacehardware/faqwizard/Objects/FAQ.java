@@ -1,4 +1,4 @@
-package com.rainbowacehardware.faqwizard.objects;
+package com.rainbowacehardware.faqwizard.Objects;
 
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;

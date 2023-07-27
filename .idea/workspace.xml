@@ -5,17 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53c7882a-9143-43df-834b-18f0c1247e89" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/objects/FAQ.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/HelperMethods/UIControllerHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/FAQScreenControllers/NewFAQController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/FAQScreenControllers/NewFAQController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/FAQScreenControllers/ViewFAQsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/FAQScreenControllers/ViewFAQsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/HomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/FAQScreenControllers/NewFAQController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/Controllers/FAQScreenControllers/NewFAQController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/FAQScreenControllers/ViewFAQsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/Controllers/FAQScreenControllers/ViewFAQsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/Controllers/HomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/objects/FAQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/Objects/FAQ.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/FAQ-Screens/New-FAQ.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/FAQ-Screens/New-FAQ.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/FAQ-Screens/View-FAQs.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/FAQ-Screens/View-FAQs.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Styles/FAQ-Screens/FAQ-View.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Styles/FAQ-Screens/View-FAQ.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Home-Page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Home-Page.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,23 +45,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.fileTypes",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Styles/" />
@@ -87,7 +87,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1690248396566</updated>
-      <workItem from="1690248398281" duration="31518000" />
+      <workItem from="1690248398281" duration="32026000" />
+      <workItem from="1690477900109" duration="4932000" />
     </task>
     <servers />
   </component>

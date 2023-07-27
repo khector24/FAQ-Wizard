@@ -8,7 +8,9 @@ module com.rainbowacehardware.faqwizard {
 
     opens com.rainbowacehardware.faqwizard to javafx.fxml;
     exports com.rainbowacehardware.faqwizard;
-    exports com.rainbowacehardware.faqwizard.controllers;
-    exports com.rainbowacehardware.faqwizard.controllers.FAQScreenControllers;
-    exports com.rainbowacehardware.faqwizard.objects;
+    exports com.rainbowacehardware.faqwizard.Controllers;
+    exports com.rainbowacehardware.faqwizard.Controllers.FAQScreenControllers;
+    exports com.rainbowacehardware.faqwizard.Objects;
+    exports com.rainbowacehardware.faqwizard.HelperMethods;
+    opens com.rainbowacehardware.faqwizard.HelperMethods to javafx.fxml;
 }

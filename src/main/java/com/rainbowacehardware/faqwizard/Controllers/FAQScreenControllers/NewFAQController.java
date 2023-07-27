@@ -1,7 +1,7 @@
-package com.rainbowacehardware.faqwizard.controllers.FAQScreenControllers;
+package com.rainbowacehardware.faqwizard.Controllers.FAQScreenControllers;
 
 import com.rainbowacehardware.faqwizard.DatabaseConnection;
-import com.rainbowacehardware.faqwizard.objects.FAQ;
+import com.rainbowacehardware.faqwizard.HelperMethods.UIControllerHelper;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +13,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -29,13 +30,7 @@ public class NewFAQController {
     @FXML
     public Button updateBtn;
     @FXML
-    public Button deleteBtn;
-    @FXML
     public Button clearBtn;
-    @FXML
-    public Button homeBtn;
-    @FXML
-    public Button FAQBtn;
     @FXML
     public Button closeBtn;
 
@@ -68,11 +63,6 @@ public class NewFAQController {
         openModalWindowHelperMethod("");
     }
 
-    public void deleteBtnOnAction(ActionEvent event) {
-        // Implement the delete logic here
-        // You can use a similar approach to the "Add" method
-    }
-
     public void clearBtnOnAction(ActionEvent event) {
         clear();
     }
@@ -87,8 +77,7 @@ public class NewFAQController {
 
     @FXML
     public void closeBtnOnAction(ActionEvent event) {
-        Stage stage = (Stage) closeBtn.getScene().getWindow();
-        stage.close();
+        UIControllerHelper.closeWindow(event);
     }
 
     public void clear() {
@@ -106,6 +95,7 @@ public class NewFAQController {
             Stage modalStage = new Stage();
             modalStage.initModality(Modality.APPLICATION_MODAL);
             modalStage.setScene(new Scene(root));
+            modalStage.initStyle(StageStyle.UNDECORATED);
 
             // Show the modal window and wait for user interaction
             modalStage.showAndWait();
