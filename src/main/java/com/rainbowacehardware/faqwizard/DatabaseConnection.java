@@ -3,20 +3,20 @@ package com.rainbowacehardware.faqwizard;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 public class DatabaseConnection {
 
-    public static final String DB_NAME = "your-database-name.db"; // Replace "your-database-name" with your database file name
+    public static final String DB_NAME = "database/faq_wizard.db";
     public static final String DB_URL = "jdbc:sqlite:" + DB_NAME;
     private Connection databaseLink;
 
     public Connection getConnection() {
         try {
             if (databaseLink == null || databaseLink.isClosed()) {
-                // Load the SQLite JDBC driver (Ensure you have added the driver to your build tool)
                 Class.forName("org.sqlite.JDBC");
-                // Create a connection to the database
                 databaseLink = DriverManager.getConnection(DB_URL);
+                createTableIfNotExists();
             }
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
@@ -24,5 +24,20 @@ public class DatabaseConnection {
 
         return databaseLink;
     }
+
+    private void createTableIfNotExists() {
+        try {
+            Statement statement = databaseLink.createStatement();
+            String createTableQuery = "CREATE TABLE IF NOT EXISTS faq_table ("
+                    + "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                    + "question TEXT NOT NULL,"
+                    + "answer TEXT NOT NULL"
+                    + ")";
+            statement.execute(createTableQuery);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
+
 

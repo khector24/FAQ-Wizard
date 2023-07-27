@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53c7882a-9143-43df-834b-18f0c1247e89" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/database/faq_wizard.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/LoginPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Login-Page.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/FAQScreenControllers/ViewFAQsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/FAQScreenControllers/ViewFAQsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/FAQScreenControllers/NewFAQController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/FAQScreenControllers/NewFAQController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/HomePageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/FAQ-Screens/New-FAQ.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/FAQ-Screens/New-FAQ.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/FAQ-Screens/View-FAQs.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/FAQ-Screens/View-FAQs.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Home-Page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Home-Page.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="CSS File" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -55,6 +58,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -83,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1690248396566</updated>
-      <workItem from="1690248398281" duration="15667000" />
+      <workItem from="1690248398281" duration="23627000" />
     </task>
     <servers />
   </component>

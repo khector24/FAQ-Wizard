@@ -14,7 +14,10 @@
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="body" stylesheets="@../Styles/FAQ-Screens/New-FAQ-Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rainbowacehardware.faqwizard.controllers.FAQScreenControllers.NewFAQController">
    <HBox prefHeight="61.0" prefWidth="570.0" styleClass="title-hbox">
       <HBox prefHeight="100.0" prefWidth="200.0" styleClass="inner-hbox">
-         <Label prefHeight="25.0" prefWidth="383.0" styleClass="title-label" text="ADD NEW FAQ" />
+         <Label prefHeight="25.0" prefWidth="383.0" styleClass="title-label" text="ADD NEW-FAQ">
+            <graphic>
+               <Pane prefHeight="35.0" prefWidth="5.0" style="-fx-background-color: blue;" />
+            </graphic></Label>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <styleClass>

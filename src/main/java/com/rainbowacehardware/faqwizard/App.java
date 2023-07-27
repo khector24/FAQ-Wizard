@@ -4,13 +4,15 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class App extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(""));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Login-Page.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setResizable(false);
         stage.show();
     }

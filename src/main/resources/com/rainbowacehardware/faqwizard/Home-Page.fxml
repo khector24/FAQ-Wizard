@@ -4,5 +4,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rainbowacehardware.faqwizard.controllers.HomePageController">
-    <Button fx:id="addNewFAQBtn" layoutX="253.0" layoutY="187.0" mnemonicParsing="false" text="Add New FAQ" />
+    <Button fx:id="viewFAQBtn" layoutX="253.0" layoutY="187.0" mnemonicParsing="false" onAction="#viewFAQBtnOnAction" text="View FAQ" />
+   <Button fx:id="otherBtn" layoutX="253.0" layoutY="228.0" mnemonicParsing="false" onAction="#viewFAQBtnOnAction" text="otherPage" />
 </AnchorPane>

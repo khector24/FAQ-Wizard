@@ -11,19 +11,24 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../Styles/FAQ-Screens/FAQ-View.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rainbowacehardware.faqwizard.controllers.FAQScreenControllers.ViewFAQsController">
-   <Text layoutX="14.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frequently Asked Questions">
+   <Text layoutX="14.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frequently Asked Questions">
       <font>
-         <Font size="24.0" />
+         <Font size="26.0" />
       </font>
    </Text>
-   <TableView layoutX="14.0" layoutY="54.0" prefHeight="320.0" prefWidth="533.0">
+   <TableView layoutX="14.0" layoutY="54.0" prefHeight="325.0" prefWidth="533.0">
       <columns>
          <TableColumn fx:id="idCol" prefWidth="40.0" text="ID" />
          <TableColumn fx:id="questionCol" prefWidth="125.0" text="QUESTION" />
          <TableColumn fx:id="answerCol" prefWidth="379.0" text="ANSWER" />
       </columns>
    </TableView>
-   <VBox alignment="CENTER" layoutX="553.0" layoutY="14.0" prefHeight="200.0" prefWidth="40.0" styleClass="button-hbox">
+   <VBox alignment="CENTER" layoutX="553.0" layoutY="49.0" prefHeight="188.0" prefWidth="40.0" styleClass="button-hbox">
+      <Button fx:id="addBtn" layoutX="15.0" layoutY="68.0" mnemonicParsing="false">
+         <graphic>
+            <FontAwesomeIconView glyphName="PLUS" />
+         </graphic>
+      </Button>
       <Button fx:id="editBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false">
          <graphic>
             <FontAwesomeIconView glyphName="EDIT" />
@@ -39,6 +44,7 @@
             <FontAwesomeIconView glyphName="HOME" />
          </graphic>
       </Button>
+      <Pane prefHeight="5.0" prefWidth="10.0" style="-fx-background-color: blue;" />
    </VBox>
    <Pane prefHeight="10.0" prefWidth="600.0" style="-fx-background-color: blue;" />
 </AnchorPane>
