@@ -24,6 +24,7 @@
             <String fx:value="inner-hbox" />
             <String fx:value="inner-button-hbox" />
          </styleClass>
+         <Label prefHeight="23.0" prefWidth="71.0" text="ID: " />
          <Button fx:id="homeBtn" mnemonicParsing="false" text="Home">
             <graphic>
                <FontAwesomeIconView glyphName="HOME" />
@@ -59,7 +60,7 @@
       <TextArea fx:id="answerTextArea" prefHeight="96.0" prefWidth="480.0" />
    </HBox>
    <HBox prefHeight="100.0" prefWidth="200.0" styleClass="bottom-button-hbox">
-      <Button fx:id="addBtn" mnemonicParsing="false" onAction="#Add" prefHeight="31.0" prefWidth="88.0" text="ADD">
+      <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addBtnOnAction" prefHeight="31.0" prefWidth="88.0" text="ADD">
          <font>
             <Font size="12.0" />
          </font>
@@ -67,7 +68,7 @@
             <FontAwesomeIconView glyphName="PLUS" size="10" />
          </graphic>
       </Button>
-      <Button fx:id="updateBtn" mnemonicParsing="false" onAction="#Update" prefHeight="31.0" prefWidth="88.0" text="UPDATE">
+      <Button fx:id="updateBtn" mnemonicParsing="false" onAction="#updateBtnOnAction" prefHeight="31.0" prefWidth="88.0" text="UPDATE">
          <font>
             <Font size="12.0" />
          </font>
@@ -75,7 +76,7 @@
             <FontAwesomeIconView glyphName="PENCIL" size="10" />
          </graphic>
       </Button>
-      <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#Delete" prefHeight="31.0" prefWidth="88.0" text="DELETE">
+      <Button fx:id="deleteBtn" mnemonicParsing="false" onAction="#deleteBtnOnAction" prefHeight="31.0" prefWidth="88.0" text="DELETE">
          <font>
             <Font size="12.0" />
          </font>
@@ -83,12 +84,20 @@
             <FontAwesomeIconView glyphName="TRASH" size="10" text="" />
          </graphic>
       </Button>
-      <Button fx:id="clearBtn" mnemonicParsing="false" onAction="#Delete" prefHeight="31.0" prefWidth="88.0" text="CLEAR">
+      <Button fx:id="clearBtn" mnemonicParsing="false" onAction="#clearBtnOnAction" prefHeight="31.0" prefWidth="88.0" text="CLEAR">
          <font>
             <Font size="12.0" />
          </font>
          <graphic>
             <FontAwesomeIconView glyphName="ERASER" />
+         </graphic>
+      </Button>
+      <Button fx:id="closeBtn" layoutX="406.0" layoutY="19.0" mnemonicParsing="false" onAction="#closeBtnOnAction" prefHeight="31.0" prefWidth="88.0" text="CLOSE" textFill="RED">
+         <font>
+            <Font size="12.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView glyphName="TIMES_CIRCLE" />
          </graphic>
       </Button>
    </HBox>

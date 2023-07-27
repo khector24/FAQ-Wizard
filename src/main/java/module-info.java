@@ -10,4 +10,5 @@ module com.rainbowacehardware.faqwizard {
     exports com.rainbowacehardware.faqwizard;
     exports com.rainbowacehardware.faqwizard.controllers;
     exports com.rainbowacehardware.faqwizard.controllers.FAQScreenControllers;
+    exports com.rainbowacehardware.faqwizard.objects;
 }

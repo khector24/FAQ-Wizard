@@ -5,17 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53c7882a-9143-43df-834b-18f0c1247e89" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/LoginPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Login-Page.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/objects/FAQ.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/DatabaseConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/FAQScreenControllers/NewFAQController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/FAQScreenControllers/NewFAQController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/FAQScreenControllers/ViewFAQsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/FAQScreenControllers/ViewFAQsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/HomePageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/FAQ-Screens/New-FAQ.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/FAQ-Screens/New-FAQ.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/FAQ-Screens/View-FAQs.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/FAQ-Screens/View-FAQs.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Home-Page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Home-Page.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Styles/FAQ-Screens/FAQ-View.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Styles/FAQ-Screens/View-FAQ.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1690248396566</updated>
-      <workItem from="1690248398281" duration="23627000" />
+      <workItem from="1690248398281" duration="31518000" />
     </task>
     <servers />
   </component>

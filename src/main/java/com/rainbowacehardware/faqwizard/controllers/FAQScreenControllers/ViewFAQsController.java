@@ -1,10 +1,28 @@
 package com.rainbowacehardware.faqwizard.controllers.FAQScreenControllers;
 
+import com.rainbowacehardware.faqwizard.DatabaseConnection;
+import com.rainbowacehardware.faqwizard.objects.FAQ;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
-public class ViewFAQsController {
+import java.io.IOException;
+import java.net.URL;
+import java.sql.*;
+import java.util.ResourceBundle;
+
+public class ViewFAQsController implements Initializable {
+    @FXML
+    public Button addBtn;
     @FXML
     public Button editBtn;
     @FXML
@@ -12,9 +30,121 @@ public class ViewFAQsController {
     @FXML
     public Button homeBtn;
     @FXML
-    public TableColumn idCol;
+    public TableView<FAQ> faqTable;
     @FXML
-    public TableColumn questionCol;
+    public TableColumn<FAQ, Integer> idCol;
     @FXML
-    public TableColumn answerCol;
+    public TableColumn<FAQ, String> questionCol;
+    @FXML
+    public TableColumn<FAQ, String> answerCol;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        setUpTableColumns();
+        loadDataIntoFAQTable();
+    }
+
+    public void setUpTableColumns() {
+        idCol.setCellValueFactory(new PropertyValueFactory<>("id"));
+        questionCol.setCellValueFactory(new PropertyValueFactory<>("question"));
+        questionCol.setCellFactory(tc -> {
+            TableCell<FAQ, String> cell = new TableCell<>();
+            Text text = new Text();
+            cell.setGraphic(text);
+            cell.setPrefHeight(Control.USE_COMPUTED_SIZE);
+            text.wrappingWidthProperty().bind(questionCol.widthProperty());
+            text.textProperty().bind(cell.itemProperty());
+            return cell;
+        });
+        answerCol.setCellValueFactory(new PropertyValueFactory<>("answer"));
+        answerCol.setCellFactory(tc -> {
+            TableCell<FAQ, String> cell = new TableCell<>();
+            Text text = new Text();
+            cell.setGraphic(text);
+            cell.setPrefHeight(Control.USE_COMPUTED_SIZE);
+            text.wrappingWidthProperty().bind(answerCol.widthProperty());
+            text.textProperty().bind(cell.itemProperty());
+            return cell;
+        });
+    }
+
+    public void loadDataIntoFAQTable() {
+        ObservableList<FAQ> faqs = FXCollections.observableArrayList();
+        Connection connection = new DatabaseConnection().getConnection();
+
+        String loadQuery = "SELECT * FROM faq_table";
+
+        try (Statement statement = connection.createStatement();
+             ResultSet resultSet = statement.executeQuery(loadQuery)) {
+
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String question = resultSet.getString("question");
+                String answer = resultSet.getString("answer");
+
+                FAQ faq = new FAQ(id, question, answer);
+                faqs.add(faq);
+            }
+
+            faqTable.setItems(faqs);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void addBtnOnAction(ActionEvent event) {
+        openPageHelperMethod("/com/rainbowacehardware/faqwizard/FAQ-Screens/New-FAQ.fxml");
+    }
+
+    @FXML
+    public void deleteBtnOnAction(ActionEvent event) {
+        FAQ selectedFAQ = faqTable.getSelectionModel().getSelectedItem();
+
+        if (selectedFAQ != null) {
+            Connection connection = new DatabaseConnection().getConnection();
+
+            String deleteQuery = "DELETE FROM faq_table WHERE id=?";
+
+            try (PreparedStatement statement = connection.prepareStatement(deleteQuery)) {
+                statement.setInt(1, selectedFAQ.getId());
+                statement.executeUpdate();
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+            loadDataIntoFAQTable();
+        }
+    }
+
+    @FXML
+    public void homeBtnOnAction (ActionEvent event) {
+        openPageHelperMethod("/com/rainbowacehardware/faqwizard/Home-Page.fxml");
+        // Close the current stage
+        Stage currentStage = (Stage) homeBtn.getScene().getWindow();
+        currentStage.close();
+    }
+
+    public void openPageHelperMethod(String fxmlFileName){
+        try {
+            // Load the FXML file
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFileName));
+            Parent root = loader.load();
+
+            // Create a new stage for the loaded page
+            Stage newStage = new Stage();
+            newStage.setScene(new Scene(root));
+
+            // Show the new stage
+            newStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void reloadBtnOnAction(ActionEvent event) {
+        loadDataIntoFAQTable();
+    }
 }

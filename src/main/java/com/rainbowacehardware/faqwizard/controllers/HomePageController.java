@@ -13,6 +13,8 @@ import java.io.IOException;
 public class HomePageController {
     @FXML
     public Button viewFAQBtn;
+    @FXML
+    public Button otherBtn;
 
     @FXML
     public void viewFAQBtnOnAction(ActionEvent event) {
