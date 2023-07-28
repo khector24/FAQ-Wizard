@@ -14,12 +14,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class ViewFAQsController implements Initializable {
@@ -106,6 +108,20 @@ public class ViewFAQsController implements Initializable {
         openPageHelperMethod("/com/rainbowacehardware/faqwizard/FAQ-Screens/New-FAQ.fxml");
     }
 
+    public void editBtnOnAction(ActionEvent event) {
+        notificationLbl.setText("");
+        FAQ selectedFAQ = faqTable.getSelectionModel().getSelectedItem();
+
+        if (selectedFAQ != null) {
+            if (showConfirmationAlert("Inquiry", "Would you like to edit the question with ID: " + selectedFAQ.getId())) {
+                setToBeEditedTrue(selectedFAQ.getId());
+                openModalWindowHelperMethod("/com/rainbowacehardware/faqwizard/FAQ-Screens/New-FAQ.fxml", selectedFAQ.getId());
+            }
+        } else {
+            showAlert("Error", "Please select a row to be edited.");
+        }
+    }
+
     @FXML
     public void deleteBtnOnAction(ActionEvent event) {
         FAQ selectedFAQ = faqTable.getSelectionModel().getSelectedItem();
@@ -132,9 +148,6 @@ public class ViewFAQsController implements Initializable {
     @FXML
     public void homeBtnOnAction (ActionEvent event) {
         openPageHelperMethod("/com/rainbowacehardware/faqwizard/Home-Page.fxml");
-        // Close the current stage
-        Stage currentStage = (Stage) homeBtn.getScene().getWindow();
-        currentStage.close();
     }
 
     public void openPageHelperMethod(String fxmlFileName){
@@ -150,8 +163,37 @@ public class ViewFAQsController implements Initializable {
             //Set the new stage style
             newStage.initStyle(StageStyle.UNDECORATED);
 
+            // Close the current stage
+            Stage currentStage = (Stage) homeBtn.getScene().getWindow();
+            currentStage.close();
+
             // Show the new stage
             newStage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void openModalWindowHelperMethod(String fxmlFileName, int faqId) {
+        try {
+            // Load the FXML file
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFileName));
+            Parent root = loader.load();
+
+            // Get the controller for the "Add/Edit FAQ" page
+            NewFAQController newFaqController = loader.getController();
+
+            // Pass the selected FAQ's ID to the "Add/Edit FAQ" page
+            newFaqController.setFaqIdToEdit(faqId);
+
+            // Create a new stage for the modal window
+            Stage modalStage = new Stage();
+            modalStage.initModality(Modality.APPLICATION_MODAL);
+            modalStage.setScene(new Scene(root));
+            modalStage.initStyle(StageStyle.UNDECORATED);
+
+            // Show the modal window and wait for user interaction
+            modalStage.showAndWait();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -165,11 +207,47 @@ public class ViewFAQsController implements Initializable {
         notificationLbl.setStyle("-fx-text-fill: green;");
     }
 
-    public void editBtnOnAction(ActionEvent event) {
-    }
-
     @FXML
     public void closeBtnOnAction(ActionEvent event) {
         UIControllerHelper.closeWindow(event);
+    }
+
+    private void showAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
+    private boolean showConfirmationAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+
+        // Set custom buttons for the alert
+        ButtonType yesButton = new ButtonType("Yes");
+        ButtonType noButton = new ButtonType("No");
+        alert.getButtonTypes().setAll(yesButton, noButton);
+
+        // Show the alert and wait for user response
+        Optional<ButtonType> result = alert.showAndWait();
+
+        return result.isPresent() && result.get() == yesButton;
+    }
+
+    private void setToBeEditedTrue(int faqId) {
+        Connection connection = new DatabaseConnection().getConnection();
+
+        String updateQuery = "UPDATE faq_table SET toBeEdited = ? WHERE id = ?";
+
+        try (PreparedStatement statement = connection.prepareStatement(updateQuery)) {
+            statement.setBoolean(1, true);
+            statement.setInt(2, faqId);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

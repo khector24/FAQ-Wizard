@@ -36,7 +36,7 @@ public class LoginPageController {
 
     public void loginBtnOnAction (ActionEvent event) {
         if (!usernameTfld.getText().isBlank() && !passwordTfld.getText().isBlank()) {
-            loginMessageLbl.setText("Success!");
+            //loginMessageLbl.setText("Success!");
             validateLogin();
         } else {
             showAlert("Missing Info!", "Please fill out both the username and password!");

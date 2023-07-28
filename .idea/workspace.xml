@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53c7882a-9143-43df-834b-18f0c1247e89" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/HelperMethods/UIControllerHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/FAQScreenControllers/NewFAQController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/Controllers/FAQScreenControllers/NewFAQController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/FAQScreenControllers/ViewFAQsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/Controllers/FAQScreenControllers/ViewFAQsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/controllers/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/Controllers/HomePageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/objects/FAQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/Objects/FAQ.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/Controllers/FAQScreenControllers/NewFAQController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/Controllers/FAQScreenControllers/NewFAQController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/Controllers/FAQScreenControllers/ViewFAQsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/Controllers/FAQScreenControllers/ViewFAQsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/LoginPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/FAQ-Screens/New-FAQ.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/FAQ-Screens/New-FAQ.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/FAQ-Screens/View-FAQs.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/FAQ-Screens/View-FAQs.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Home-Page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Home-Page.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,11 +83,21 @@
       <option name="presentableId" value="Default" />
       <updated>1690248396566</updated>
       <workItem from="1690248398281" duration="32026000" />
-      <workItem from="1690477900109" duration="4932000" />
+      <workItem from="1690477900109" duration="13695000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.sqlite.SQLiteException" package="org.sqlite" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
