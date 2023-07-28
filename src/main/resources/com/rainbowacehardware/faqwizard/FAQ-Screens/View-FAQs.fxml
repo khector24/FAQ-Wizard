@@ -24,7 +24,7 @@
          <TableColumn fx:id="answerCol" prefWidth="462.5041198730469" text="ANSWER" />
       </columns>
    </TableView>
-   <VBox alignment="CENTER" layoutX="750.0" layoutY="33.0" prefHeight="240.0" prefWidth="40.0" styleClass="button-hbox">
+   <VBox alignment="CENTER" layoutX="750.0" layoutY="51.0" prefHeight="240.0" prefWidth="40.0" styleClass="button-hbox">
       <Button fx:id="addBtn" layoutX="15.0" layoutY="68.0" mnemonicParsing="false" onAction="#addBtnOnAction">
          <graphic>
             <FontAwesomeIconView glyphName="PLUS" />
@@ -58,5 +58,10 @@
       </Button>
    </VBox>
    <Pane prefHeight="10.0" prefWidth="800.0" style="-fx-background-color: blue;" />
-   <Label fx:id="notificationLbl" alignment="CENTER" layoutX="372.0" layoutY="21.0" prefHeight="17.0" prefWidth="367.0" />
+   <Label fx:id="notificationLbl" alignment="CENTER" layoutX="343.0" layoutY="21.0" prefHeight="17.0" prefWidth="306.0" text="Example text!" />
+   <Button fx:id="pushToWebsiteBtn" layoutX="724.0" layoutY="16.0" mnemonicParsing="false" onAction="#pushToWebsiteBtnOnAction" text="PUSH">
+      <graphic>
+         <FontAwesomeIconView glyphName="SIGN_IN" />
+      </graphic>
+   </Button>
 </AnchorPane>

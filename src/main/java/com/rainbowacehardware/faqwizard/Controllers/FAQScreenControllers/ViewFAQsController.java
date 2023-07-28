@@ -47,6 +47,8 @@ public class ViewFAQsController implements Initializable {
     public Label notificationLbl;
     @FXML
     public Button closeBtn;
+    @FXML
+    public Button pushToWebsiteBtn;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
