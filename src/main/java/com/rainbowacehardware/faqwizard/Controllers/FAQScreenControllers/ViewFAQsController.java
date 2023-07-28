@@ -105,7 +105,22 @@ public class ViewFAQsController implements Initializable {
     @FXML
     public void addBtnOnAction(ActionEvent event) {
         notificationLbl.setText("");
-        openPageHelperMethod("/com/rainbowacehardware/faqwizard/FAQ-Screens/New-FAQ.fxml");
+        try {
+            // Load the FXML file
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/rainbowacehardware/faqwizard/FAQ-Screens/New-FAQ.fxml"));
+            Parent root = loader.load();
+
+            // Create a new stage for the modal window
+            Stage modalStage = new Stage();
+            modalStage.initModality(Modality.APPLICATION_MODAL);
+            modalStage.setScene(new Scene(root));
+            modalStage.initStyle(StageStyle.UNDECORATED);
+
+            // Show the modal window and wait for user interaction
+            modalStage.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void editBtnOnAction(ActionEvent event) {

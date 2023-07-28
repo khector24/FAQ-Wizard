@@ -36,14 +36,15 @@ public class NewFAQController {
 
     private int faqIdToEdit;
 
+    // Set the ID of the FAQ to edit
     public void setFaqIdToEdit(int faqId) {
         this.faqIdToEdit = faqId;
         idLabel.setText("ID: " + faqIdToEdit); // Update the idLabel text with the selected faqId
         loadFAQData(); // Load the data for the selected FAQ (if it exists)
     }
 
+    // Load the data for the selected FAQ and populate the questionTfld and answerTextArea
     private void loadFAQData() {
-        // Load the data for the selected FAQ and populate the questionTfld and answerTextArea
         try (Connection connection = new DatabaseConnection().getConnection();) {
             String query = "SELECT * FROM faq_table WHERE id = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
@@ -63,17 +64,20 @@ public class NewFAQController {
         }
     }
 
-
+    // Handle the add button action to insert a new FAQ into the database
     public void addBtnOnAction(ActionEvent event) {
+        // Get the question and answer from the input fields
         String question = questionTfld.getText();
         String answer = answerTextArea.getText();
 
+        // Check if the input fields are empty
         if (question.isEmpty() || answer.isEmpty()) {
             showAlert("Error", "Please enter both question and answer.");
             return;
         }
 
-        try(Connection connection = new DatabaseConnection().getConnection();) {
+        try (Connection connection = new DatabaseConnection().getConnection();) {
+            // Prepare the insert query
             String query = "INSERT INTO faq_table (question, answer) VALUES (?, ?)";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, question);
@@ -85,29 +89,32 @@ public class NewFAQController {
             showAlert("Error", "Failed to add FAQ to the database.");
         }
 
-        clear();
+        clear(); // Clear the input fields after adding the FAQ
     }
 
-    public void updateBtnOnAction (ActionEvent event) {
+    // Handle the update button action to update an existing FAQ in the database
+    public void updateBtnOnAction(ActionEvent event) {
         // Set the idLabel text to the updated faqIdToEdit
         idLabel.setText("ID: " + faqIdToEdit);
         int id = faqIdToEdit;
 
+        // Get the question and answer from the input fields
         String question = questionTfld.getText();
         String answer = answerTextArea.getText();
 
+        // Check if the input fields are empty
         if (question.isEmpty() || answer.isEmpty()) {
             showAlert("Error", "Missing Selected item.");
             return;
         }
 
-        try(Connection connection = new DatabaseConnection().getConnection();) {
-            String query = "UPDATE faq_table SET question = ?, answer = ?, toBeEdited = ? WHERE id = ?";
+        try (Connection connection = new DatabaseConnection().getConnection();) {
+            // Prepare the update query
+            String query = "UPDATE faq_table SET question = ?, answer = ? WHERE id = ?";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, question);
             preparedStatement.setString(2, answer);
-            preparedStatement.setBoolean(3, false);
-            preparedStatement.setInt(4, id);
+            preparedStatement.setInt(3, id);
             preparedStatement.executeUpdate();
             showAlert("Success", "FAQ updated successfully.");
         } catch (SQLException e) {
@@ -115,14 +122,16 @@ public class NewFAQController {
             showAlert("Error", "Failed to update FAQ in the database.");
         }
 
-        clear();
+        clear(); // Clear the input fields after updating the FAQ
     }
 
+    // Handle the clear button action to clear the input fields
     @FXML
     public void clearBtnOnAction(ActionEvent event) {
         clear();
     }
 
+    // Display an alert dialog with the given title and message
     private void showAlert(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle(title);
@@ -131,16 +140,19 @@ public class NewFAQController {
         alert.showAndWait();
     }
 
+    // Handle the close button action to close the window
     @FXML
     public void closeBtnOnAction(ActionEvent event) {
         UIControllerHelper.closeWindow(event);
     }
 
+    // Clear the input fields
     public void clear() {
         questionTfld.clear();
         answerTextArea.clear();
     }
 
+    // Open a modal window with the given FXML file name
     public void openModalWindowHelperMethod(String fxmlFileName) {
         try {
             // Load the FXML file
@@ -160,4 +172,5 @@ public class NewFAQController {
         }
     }
 }
+
 

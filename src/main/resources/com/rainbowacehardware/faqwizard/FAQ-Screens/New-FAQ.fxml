@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="body" stylesheets="@../Styles/FAQ-Screens/New-FAQ-Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rainbowacehardware.faqwizard.Controllers.FAQScreenControllers.NewFAQController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="600.0" styleClass="body" stylesheets="@../Styles/FAQ-Screens/New-FAQ-Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.rainbowacehardware.faqwizard.Controllers.FAQScreenControllers.NewFAQController">
    <HBox prefHeight="61.0" prefWidth="570.0" styleClass="title-hbox">
       <HBox prefHeight="100.0" prefWidth="200.0" styleClass="inner-hbox">
          <Label prefHeight="25.0" prefWidth="383.0" styleClass="title-label" text="ADD NEW-FAQ">
@@ -24,7 +24,7 @@
             <String fx:value="inner-hbox" />
             <String fx:value="inner-button-hbox" />
          </styleClass>
-         <Label fx:id="idLabel" alignment="CENTER" prefHeight="27.0" prefWidth="78.0" text="id" />
+         <Label fx:id="idLabel" alignment="CENTER" prefHeight="27.0" prefWidth="78.0" />
       </HBox>
    </HBox>
    <HBox prefHeight="55.0" prefWidth="570.0" styleClass="question-hbox">

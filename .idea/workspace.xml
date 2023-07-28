@@ -8,9 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/Controllers/FAQScreenControllers/NewFAQController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/Controllers/FAQScreenControllers/NewFAQController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/Controllers/FAQScreenControllers/ViewFAQsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/Controllers/FAQScreenControllers/ViewFAQsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/rainbowacehardware/faqwizard/LoginPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/FAQ-Screens/New-FAQ.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/FAQ-Screens/New-FAQ.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Home-Page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Home-Page.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Styles/FAQ-Screens/New-FAQ-Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/rainbowacehardware/faqwizard/Styles/FAQ-Screens/New-FAQ-Style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1690248396566</updated>
       <workItem from="1690248398281" duration="32026000" />
-      <workItem from="1690477900109" duration="13695000" />
+      <workItem from="1690477900109" duration="14818000" />
     </task>
     <servers />
   </component>
